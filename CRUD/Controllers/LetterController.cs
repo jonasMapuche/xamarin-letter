@@ -11,6 +11,7 @@ namespace CRUD.Controllers
     public class LetterController : ControllerBase
     {
         public static readonly LetterService _lettersService = new LetterService();
+        public static readonly SQLiteServices _sQLiteService = new SQLiteServices();
 
         [HttpGet("")]
         public async Task<ActionResult> Get()
@@ -52,6 +53,14 @@ namespace CRUD.Controllers
                 serializer.WriteObject(stream, arquivo);
             }
             return aula;
+        }
+
+        [HttpPost("SQLite")]
+        public async Task<IActionResult> SQLite()
+        {
+            List<Aula> aula = await _lettersService.GetAsync();
+            await _sQLiteService.CreateAsync(aula);
+            return Ok("SQLite build with ten word class.");
         }
 
     }
