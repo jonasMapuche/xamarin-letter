@@ -1,4 +1,5 @@
-﻿using CRUD.Models;
+﻿using CRUD.Helpers;
+using CRUD.Models;
 using SQLite;
 using System;
 using System.Collections.Generic;
@@ -51,6 +52,7 @@ namespace CRUD.Services
                     Substantivo item = new Substantivo();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") substantivo.Add(item);
                 }
                 );
@@ -69,6 +71,7 @@ namespace CRUD.Services
                     Verbo item = new Verbo();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") verbo.Add(item);
                 }
                 );
@@ -87,6 +90,7 @@ namespace CRUD.Services
                     Pronome item = new Pronome();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name!="") pronome.Add(item);
                 }
                 );
@@ -105,6 +109,7 @@ namespace CRUD.Services
                     Adjetivo item = new Adjetivo();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") adjetivo.Add(item);
                 }
                 );
@@ -123,6 +128,7 @@ namespace CRUD.Services
                     Adverbio item = new Adverbio();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") adverbio.Add(item);
                 }
                 );
@@ -141,6 +147,7 @@ namespace CRUD.Services
                     Artigo item = new Artigo();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") artigo.Add(item);
                 }
                 );
@@ -159,6 +166,7 @@ namespace CRUD.Services
                     Preposicao item = new Preposicao();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") preposicao.Add(item);
                 }
                 );
@@ -177,6 +185,7 @@ namespace CRUD.Services
                     Numeral item = new Numeral();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") numeral.Add(item);
                 }
                 );
@@ -195,6 +204,7 @@ namespace CRUD.Services
                     Conjuncao item = new Conjuncao();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") conjuncao.Add(item);
                 }
                 );
@@ -213,6 +223,7 @@ namespace CRUD.Services
                     Interjeicao item = new Interjeicao();
                     item.name = index2;
                     item.lesson = index.nome;
+                    item.language = Language.Lesson(index.nome);
                     if (item.name != "") interjeicao.Add(item);
                 }
                 );

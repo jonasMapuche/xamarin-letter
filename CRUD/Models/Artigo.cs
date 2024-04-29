@@ -9,5 +9,6 @@ namespace CRUD.Models
         public int id { get; set; }
         public String name { get; set; }
         public String lesson { get; set; }
+        public String language { get; set; }
     }
 }
